@@ -4,11 +4,8 @@ import numpy as np
 import pandas as pd
 import pickle5 as pickle
 
-
 from pylint.lint import Run
 
-import os
-os.chdir("/Users/BrookeSJ/PycharmProjects/JCMCProject/jcmcsite/jcmcsite")
 
 model_path = "render/static/render/gender_guess_model_mk4-down.pkl"
 txt_path = "render/static/render/pylint_error_names.txt"
