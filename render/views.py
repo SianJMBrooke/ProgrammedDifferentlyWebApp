@@ -48,8 +48,8 @@ def index(request):
             return render(request, 'render/results.html',
                           {'pylint_score': processed_results['pylint_score'],
                            'output_gender_guess': processed_results['output_gender_guess'],
-                           'output_gender_proba': processed_results['output_gender_proba'],
-                           'feature_importance': processed_results['feature_importance']})
+                           'output_gender_proba': processed_results['output_gender_proba']})
+                           # 'feature_importance': processed_results['feature_importance']})
 
 
     else:

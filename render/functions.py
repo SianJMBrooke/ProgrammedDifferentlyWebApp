@@ -93,7 +93,7 @@ def process_py(py_file):
 
     return {'pylint_score': round(pylint_score, 2),
             'output_gender_guess': output_gender_guess,
-            'output_gender_proba': round(max(output_gender_proba), 2),
-            'feature_importance': feature_importance}
+            'output_gender_proba': round(max(output_gender_proba), 2)}
+            # 'feature_importance': feature_importance}
 
 
