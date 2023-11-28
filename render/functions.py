@@ -83,6 +83,14 @@ def process_py(py_file):
     else:
         output_gender_guess = "Masculine"
 
+    feature_list = ['Str_Function', 'Str_Method', 'Str_Klass', 'Str_Total_Lines',
+                    'Str_Code_Lines', 'Str_Empty_Lines', 'Str_Docstring_Lines',
+                    'Str_Comment_Lines', 'Checker Group_convention', 'Checker Group_error',
+                    'Checker Group_information', 'Checker Group_refactor', 'Checker Group_warning']
+
+    feature_importance = pd.Series(gender_guesser.feature_importances_, index=feature_list)
+    feature_importance.sort_values(ascending=False, inplace=True)
+
     return {'pylint_score': round(pylint_score, 2),
             'output_gender_guess': output_gender_guess,
             'output_gender_proba': round(max(output_gender_proba), 2)}
