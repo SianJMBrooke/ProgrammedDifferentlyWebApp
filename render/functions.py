@@ -85,14 +85,15 @@ def process_py(py_file):
 
     feature_list = ['Str_Function', 'Str_Method', 'Str_Klass', 'Str_Total_Lines',
                     'Str_Code_Lines', 'Str_Empty_Lines', 'Str_Docstring_Lines',
-                    'Str_Comment_Lines', 'Checker Group_convention', 'Checker Group_error',
-                    'Checker Group_information', 'Checker Group_refactor', 'Checker Group_warning']
+                    'Str_Comment_Lines', 'Checker_Group_convention', 'Checker_Group_error',
+                    'Checker_Group_information', 'Checker_Group_refactor', 'Checker_Group_warning']
 
-    feature_importance = pd.Series(gender_guesser.feature_importances_, index=feature_list)
-    feature_importance.sort_values(ascending=False, inplace=True)
+    feature_importance_raw = pd.Series(gender_guesser.feature_importances_, index=feature_list).to_dict()
+    feature_importance = {key: round(feature_importance_raw[key], 2) for key in feature_importance_raw}
 
     return {'pylint_score': round(pylint_score, 2),
             'output_gender_guess': output_gender_guess,
-            'output_gender_proba': round(max(output_gender_proba), 2)}
+            'output_gender_proba': round(max(output_gender_proba), 2),
+            'feature_importance': feature_importance}
 
 
