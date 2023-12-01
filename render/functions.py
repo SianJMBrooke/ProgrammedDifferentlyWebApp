@@ -109,6 +109,3 @@ def process_py(py_file):
             'feature_importance': feature_importance}
 
 
-dict_test = {"one": 1, "two": 2, "three": 3}
-
-dict_test["total"] = dict_test["two"] + dict_test["three"]
