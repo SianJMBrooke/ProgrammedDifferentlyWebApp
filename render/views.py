@@ -2,7 +2,7 @@ import os
 
 from django.shortcuts import render
 import random
-from .models import UploadForm
+from .forms import UploadForm
 from .functions import process_py
 from django.shortcuts import render
 import csv
@@ -16,13 +16,14 @@ py_responses = "render/static/render/pyfile_responses.csv"
 
 
 def index(request):
-
     if request.method == 'POST':
         # create an instance of our form, and fill it with the POST data
         form = UploadForm(request.POST, request.FILES)
 
         if form.is_valid():
             pyfile = request.FILES.get('file')
+
+            upload_obj = form.save()
 
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
@@ -48,15 +49,12 @@ def index(request):
                           {'pylint_score': processed_results['pylint_score'],
                            'output_gender_guess': processed_results['output_gender_guess'],
                            'output_gender_proba': processed_results['output_gender_proba']})
-                           # 'feature_importance': processed_results['feature_importance']})
 
+            # 'feature_importance': processed_results['feature_importance']})
 
     else:
         # this must be a GET request, so create an empty form
         form = UploadForm()
 
     return render(request, 'render/index.html', {'form': form})
-
-
-
 
