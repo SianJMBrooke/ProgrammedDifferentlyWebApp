@@ -35,13 +35,13 @@
     The <i>importance</i> of these attributes in predicting gendered
     style is below.</p>
 
-<h5 style="color: #E1CCBE">Module Constituents</h5>
+<h5 style="color: #E1CCBE">Module Constituents ({{ feature_importance.constituents }}%)</h5>
 <ul>
     <li>Functions: {{ feature_importance.Str_Function }}</li>
     <li>Methods: {{ feature_importance.Str_Method }}</li>
     <li>Classes: {{ feature_importance.Str_Klass }}</li>
 </ul>
-<h5 style="color: #E1CCBE">Module Organisation</h5>
+<h5 style="color: #E1CCBE">Module Organisation ({{ feature_importance.organisation }}%)</h5>
 <ul>
     <li>Total Lines: {{ feature_importance.Str_Total_Lines }}</li>
     <li>Code Lines: {{ feature_importance.Str_Code_Lines }}</li>
@@ -49,7 +49,7 @@
     <li>Docstring Lines: {{ feature_importance.Str_Docstring_Lines }}</li>
     <li>Comment Lines: {{ feature_importance.Str_Comment_Lines }}</li>
 </ul>
-<h5 style="color: #E1CCBE">Module Style Checkers (PEP-8)</h5>
+<h5 style="color: #E1CCBE">Module PEP-8 Style Checkers ({{ feature_importance.checkers }}%)</h5>
 <ul>
     <li>Convention: {{ feature_importance.Checker_Group_convention }}</li>
     <li>Error: {{ feature_importance.Checker_Group_error }}</li>

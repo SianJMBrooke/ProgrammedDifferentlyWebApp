@@ -90,7 +90,25 @@ def process_py(py_file):
     feature_importance_raw = pd.Series(gender_guesser.feature_importances_, index=feature_list).to_dict()
     feature_importance = {key: round(feature_importance_raw[key], 2) for key in feature_importance_raw}
 
+    feature_importance["organisation"] = round(
+        feature_importance["Str_Total_Lines"] + feature_importance["Str_Code_Lines"] \
+        + feature_importance["Str_Empty_Lines"] + feature_importance["Str_Docstring_Lines"] \
+        + feature_importance["Str_Comment_Lines"]) * 100
+
+    feature_importance["constituents"] = round(feature_importance["Str_Function"] + feature_importance["Str_Method"] \
+                                               + feature_importance["Str_Klass"]) * 100
+
+    feature_importance["checkers"] = round(
+        feature_importance["Checker_Group_convention"] + feature_importance["Checker_Group_error"] + \
+        feature_importance["Checker_Group_information"] + feature_importance["Checker_Group_refactor"] + \
+        feature_importance["Checker_Group_warning"]) * 100
+
     return {'pylint_score': round(pylint_score, 2),
             'output_gender_guess': output_gender_guess,
             'output_gender_proba': round(max(output_gender_proba), 2),
             'feature_importance': feature_importance}
+
+
+dict_test = {"one": 1, "two": 2, "three": 3}
+
+dict_test["total"] = dict_test["two"] + dict_test["three"]
