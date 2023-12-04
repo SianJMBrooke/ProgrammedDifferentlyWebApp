@@ -27,14 +27,8 @@ def index(request):
             python_file.write(pyfile.read().decode())
             python_file.close()
 
-
             # Process the Python file
             processed_results = process_py(py_file)
-
-            form.pylint_score = processed_results['pylint_score']
-            form.gender_guess = processed_results['output_gender_guess']
-            form.feature_importance = processed_results['feature_importance']
-
 
             return render(request, 'render/results.html',
                           {'pylint_score': processed_results['pylint_score'],
