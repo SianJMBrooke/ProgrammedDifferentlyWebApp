@@ -38,6 +38,7 @@ def index(request):
             # Process the Python file
             processed_results = process_py(py_file)
 
+            # Add the results to the database
             form.pylint_score = processed_results['pylint_score']
 
             file = open(py_responses, 'a')
