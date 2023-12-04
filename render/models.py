@@ -20,5 +20,5 @@ class UploadModel(models.Model):
     file = forms.FileField(label='Upload your Python file', required=True,
                            widget=forms.FileInput(attrs={'accept': '.py'}))
     consent = forms.BooleanField(label='I consent to having my data stored and processed.')
-    pylint_score = None
+    pylint_score = 0
 
