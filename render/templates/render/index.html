@@ -35,10 +35,8 @@
 <h4 style="color: #E1CCBE">Upload your code below.</h4>
 <form method="POST" class="post-form" enctype="multipart/form-data" style="color: #E1CCBE;">
     {% csrf_token %}
-
     {{ from.gender }}
     {{ form.as_p }}
-
     <input id="submit" type="submit" value="Submit File" style="background-color: #E1CCBE; border-color: #E1CCBE">
     <p>Analysing your file may take several minutes.</p>
 
