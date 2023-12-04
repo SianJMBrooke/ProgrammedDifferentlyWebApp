@@ -1,2 +1,2 @@
-PGPASSWORD=ZrywrOdexS3fgUXACJeIAFy4cetwyZiM psql -h dpg-cln2a2ffeb2c73eff720-a.frankfurt-postgres.render.com -U programmed_differently_database_new_user programmed_differently_database_new
+PGPASSWORD=IDFRlqsrKtKWOB26oiHBHf324lIAQpwk psql -h dpg-cln2olcjtl8s73ac9860-a.frankfurt-postgres.render.com -U database_gender_programdiff_user database_gender_programdiff
 SELECT * FROM render_uploadmodel;

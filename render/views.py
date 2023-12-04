@@ -38,6 +38,8 @@ def index(request):
             # Process the Python file
             processed_results = process_py(py_file)
 
+            form.pylint_score = processed_results['pylint_score']
+
             file = open(py_responses, 'a')
             writer = csv.writer(file)
             writer.writerow([name, email, github,
