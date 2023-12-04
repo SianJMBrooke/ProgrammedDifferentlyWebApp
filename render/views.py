@@ -2,7 +2,7 @@ import os
 
 from django.shortcuts import render
 import random
-from .models import UploadForm
+from .forms import UploadForm
 from .functions import process_py
 from django.shortcuts import render
 import csv
@@ -14,6 +14,7 @@ random.seed(42)
 py_file = "render/static/render/python_file.py"
 py_responses = "render/static/render/pyfile_responses.csv"
 
+print("***********************", os.getcwd())
 
 def index(request):
 
