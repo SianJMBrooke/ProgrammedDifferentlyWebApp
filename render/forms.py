@@ -5,7 +5,7 @@ from .models import UploadModel
 class UploadForm(forms.ModelForm):
     class Meta:
         model = UploadModel
-        fields = ['name', 'email', 'github']
+        fields = ['name', 'email', 'github', 'gender']
 
     file = forms.FileField(label='Upload your Python file', required=True,
                            widget=forms.FileInput(attrs={'accept': '.py'}))
