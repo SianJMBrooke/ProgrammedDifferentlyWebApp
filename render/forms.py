@@ -6,7 +6,7 @@ class UploadForm(forms.ModelForm):
     class Meta:
         model = UploadModel
 
-        fields = ['name', 'gender', 'email', 'github', 'pylint_score']
+        fields = ['name', 'gender', 'email', 'github']
 
     file = forms.FileField(label='Upload your Python file', required=True,
                              widget=forms.FileInput(attrs={'accept': '.py'}))
