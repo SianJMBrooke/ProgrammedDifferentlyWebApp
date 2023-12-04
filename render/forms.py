@@ -1,9 +1,12 @@
 from django import forms
+from .models import UploadModel
 
 
-class UploadForm(forms.Form):
+class UploadForm(forms.ModelForm):
+    class Meta:
+        model = UploadModel
+        fields = ['name', 'email', 'github']
     name = forms.CharField(max_length=100, label='Your full name')
-    gender = forms.CharField(max_length=20, label='Your gender')
     email = forms.EmailField(label='Your e-mail address')
     github = forms.URLField(label='Your GitHub profile URL')
     file = forms.FileField(label='Upload your Python file', required=True,
