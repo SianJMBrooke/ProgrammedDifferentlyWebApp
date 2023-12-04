@@ -23,28 +23,12 @@ def index(request):
         if form.is_valid():
             pyfile = request.FILES.get('file')
 
-            upload_obj = form.save()
-
-            # TODO: add gender classification etc to sql data base
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            github = form.cleaned_data['github']
-            # upload = form.cleaned_data['upload']
-
             python_file = open(py_file, "w")
             python_file.write(pyfile.read().decode())
             python_file.close()
 
             # Process the Python file
             processed_results = process_py(py_file)
-
-            file = open(py_responses, 'a')
-            writer = csv.writer(file)
-            writer.writerow([name, email, github,
-                             processed_results['pylint_score'],
-                             processed_results['output_gender_guess'],
-                             processed_results['output_gender_proba']])
-            file.close()
 
             return render(request, 'render/results.html',
                           {'pylint_score': processed_results['pylint_score'],
