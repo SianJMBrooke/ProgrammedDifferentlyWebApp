@@ -39,7 +39,7 @@ def index(request):
             processed_results = process_py(py_file)
 
             # Add the results to the database
-            form.instance.pylint_score = request.processed_results['pylint_score']
+        #    form.instance.pylint_score = request.processed_results['pylint_score']
             form.save()
 
             return render(request, 'render/results.html',

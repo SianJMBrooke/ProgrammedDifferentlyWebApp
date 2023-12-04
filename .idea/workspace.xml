@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f065ee6-ac93-4aea-92c4-b3bad74b14fb" name="Changes" comment="add pylint to model">
-      <change beforePath="$PROJECT_DIR$/render/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/render/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/render/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,7 @@
       <workItem from="1701693223848" duration="1383000" />
       <workItem from="1701706890530" duration="6456000" />
       <workItem from="1701713926198" duration="112000" />
-      <workItem from="1701714040825" duration="10594000" />
+      <workItem from="1701714040825" duration="11479000" />
     </task>
     <task id="LOCAL-00001" summary="amend filepath">
       <created>1701184345188</created>
@@ -410,7 +411,28 @@
       <option name="project" value="LOCAL" />
       <updated>1701730339819</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="add pylint to model">
+      <created>1701730441997</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1701730441997</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add pylint to model">
+      <created>1701730447370</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1701730447370</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add pylint to model">
+      <created>1701730965827</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1701730965827</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
