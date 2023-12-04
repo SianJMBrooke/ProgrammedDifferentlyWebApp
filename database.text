@@ -1,3 +1,2 @@
- psql postgres://programmed_differently_database_user:wKIRgoJYMCs9rIfDL6Hwx7nhDUzyuKbL@dpg-clitpn1b2fgs73b54190-a.frankfurt-postgres.render.com/programmed_differently_database
-
+PGPASSWORD=ZrywrOdexS3fgUXACJeIAFy4cetwyZiM psql -h dpg-cln2a2ffeb2c73eff720-a.frankfurt-postgres.render.com -U programmed_differently_database_new_user programmed_differently_database_new
 SELECT * FROM render_uploadmodel;
