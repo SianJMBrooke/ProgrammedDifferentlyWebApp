@@ -14,16 +14,16 @@ random.seed(42)
 py_file = "render/static/render/python_file.py"
 py_responses = "render/static/render/pyfile_responses.csv"
 
-print("***********************", os.getcwd())
 
 def index(request):
-
     if request.method == 'POST':
         # create an instance of our form, and fill it with the POST data
         form = UploadForm(request.POST, request.FILES)
 
         if form.is_valid():
             pyfile = request.FILES.get('file')
+
+            upload_obj = form.save()
 
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
@@ -48,16 +48,11 @@ def index(request):
             return render(request, 'render/results.html',
                           {'pylint_score': processed_results['pylint_score'],
                            'output_gender_guess': processed_results['output_gender_guess'],
-                           'output_gender_proba': processed_results['output_gender_proba']})
-                           # 'feature_importance': processed_results['feature_importance']})
-
+                           'output_gender_proba': processed_results['output_gender_proba'],
+                           'feature_importance': processed_results['feature_importance']})
 
     else:
         # this must be a GET request, so create an empty form
         form = UploadForm()
 
     return render(request, 'render/index.html', {'form': form})
-
-
-
-
