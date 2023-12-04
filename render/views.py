@@ -39,16 +39,8 @@ def index(request):
             processed_results = process_py(py_file)
 
             # Add the results to the database
-            form.pylint_score = processed_results['pylint_score']
+            form.instance.pylint_score = processed_results['pylint_score']
             form.save()
-
-            file = open(py_responses, 'a')
-            writer = csv.writer(file)
-            writer.writerow([name, email, github,
-                             processed_results['pylint_score'],
-                             processed_results['output_gender_guess'],
-                             processed_results['output_gender_proba']])
-            file.close()
 
             return render(request, 'render/results.html',
                           {'pylint_score': processed_results['pylint_score'],
