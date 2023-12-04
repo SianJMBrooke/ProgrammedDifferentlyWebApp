@@ -23,6 +23,9 @@ def index(request):
         if form.is_valid():
             pyfile = request.FILES.get('file')
 
+            upload_obj = form.save()
+
+            # TODO: add gender classification etc to sql data base
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             github = form.cleaned_data['github']
