@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f065ee6-ac93-4aea-92c4-b3bad74b14fb" name="Changes" comment="added unversioned files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.text" beforeDir="false" afterPath="$PROJECT_DIR$/database.text" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/render/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/render/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render/templates/render/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/render/templates/render/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="6f065ee6-ac93-4aea-92c4-b3bad74b14fb" name="Changes" comment="form dropdown" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +98,7 @@
       <workItem from="1701693223848" duration="1383000" />
       <workItem from="1701706890530" duration="6456000" />
       <workItem from="1701713926198" duration="112000" />
-      <workItem from="1701714040825" duration="4551000" />
+      <workItem from="1701714040825" duration="5027000" />
     </task>
     <task id="LOCAL-00001" summary="amend filepath">
       <created>1701184345188</created>
@@ -324,7 +317,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701717518349</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added unversioned files">
+      <created>1701718611499</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1701718611499</updated>
+    </task>
+    <task id="LOCAL-00033" summary="form dropdown">
+      <created>1701718699097</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1701718699097</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +363,7 @@
     <MESSAGE value="fixed init" />
     <MESSAGE value="added forms.save()" />
     <MESSAGE value="added unversioned files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added unversioned files" />
+    <MESSAGE value="form dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="form dropdown" />
   </component>
 </project>
