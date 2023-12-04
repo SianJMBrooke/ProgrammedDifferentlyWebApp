@@ -13,7 +13,7 @@ class UploadModel(models.Model):
         ("NOTSAY", "Prefer not to say")
     )
     name = models.CharField(max_length=100, verbose_name='Your full name')
-    gender = models.CharField(max_length=1, choices=gender_choice, default="SELECT")
+    gender = models.CharField(max_length=9, choices=gender_choice, default="SELECT")
     email = models.EmailField(verbose_name='Your e-mail address')
     github = models.URLField(verbose_name='Your GitHub profile URL')
     file = forms.FileField(label='Upload your Python file', required=True,
