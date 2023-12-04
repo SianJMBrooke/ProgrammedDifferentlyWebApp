@@ -39,7 +39,8 @@ def index(request):
             processed_results = process_py(py_file)
 
             # Add the results to the database
-            form.pylint_score =+ processed_results['pylint_score']
+            form.pylint_score = processed_results['pylint_score']
+            form.save()
 
             file = open(py_responses, 'a')
             writer = csv.writer(file)
