@@ -22,8 +22,8 @@ class UploadModel(models.Model):
                            widget=forms.FileInput(attrs={'accept': '.py'}))
     consent = forms.BooleanField(label='I consent to having my data stored and processed.')
 
-    pylint_score = models.CharField(max_length=100, verbose_name='Pylint score', null=True)
-    gender_guess = models.CharField(max_length=100, verbose_name="Gender Guess", null=True)
-    gender_guess_proba = models.CharField(max_length=100, verbose_name="Gender Guess Probability", null=True)
+    pylint_score = models.CharField(max_length=1000, verbose_name='Pylint score', null=True)
+    gender_guess = models.CharField(max_length=1000, verbose_name="Gender Guess", null=True)
+    gender_guess_proba = models.CharField(max_length=1000, verbose_name="Gender Guess Probability", null=True)
     components = models.CharField(max_length=1000, verbose_name="Components", null=True)
 
