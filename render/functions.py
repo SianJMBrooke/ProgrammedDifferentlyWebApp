@@ -103,7 +103,7 @@ def process_py(py_file):
         feature_importance["Checker_Group_information"] + feature_importance["Checker_Group_refactor"] + \
         feature_importance["Checker_Group_warning"], 2) * 100
 
-    return {'pylint_score': round(pylint_score, 2),
+    return {'pylint_score': round(pylint_score, 4),
             'output_gender_guess': output_gender_guess,
             'output_gender_proba': round(max(output_gender_proba), 2),
             'feature_importance': feature_importance}
