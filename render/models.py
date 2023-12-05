@@ -13,10 +13,10 @@ GENDER_CHOICES = (
 
 
 class UploadModel(models.Model):
-    name = models.CharField(max_length=100, verbose_name='Your full name')
+    name = models.CharField(max_length=1000, verbose_name='Your full name')
     gender = models.CharField(max_length=9, choices=GENDER_CHOICES, default='SELECT')
-    email = models.EmailField(verbose_name='Your e-mail address')
-    github = models.URLField(verbose_name='Your GitHub profile URL')
+    email = models.EmailField(max_length=1000, verbose_name='Your e-mail address')
+    github = models.URLField(max_length=1000, verbose_name='Your GitHub profile URL')
 
     file = forms.FileField(label='Upload your Python file', required=True,
                            widget=forms.FileInput(attrs={'accept': '.py'}))
