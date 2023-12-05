@@ -25,5 +25,4 @@ class UploadModel(models.Model):
     pylint_score = models.CharField(max_length=1000, verbose_name='Pylint score', null=True)
     gender_guess = models.CharField(max_length=1000, verbose_name="Gender Guess", null=True)
     gender_guess_proba = models.CharField(max_length=1000, verbose_name="Gender Guess Probability", null=True)
-    components = models.CharField(max_length=1000, verbose_name="Components", null=True)
 
