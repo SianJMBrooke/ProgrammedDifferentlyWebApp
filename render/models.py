@@ -17,8 +17,13 @@ class UploadModel(models.Model):
     gender = models.CharField(max_length=9, choices=GENDER_CHOICES, default='SELECT')
     email = models.EmailField(verbose_name='Your e-mail address')
     github = models.URLField(verbose_name='Your GitHub profile URL')
+
     file = forms.FileField(label='Upload your Python file', required=True,
                            widget=forms.FileInput(attrs={'accept': '.py'}))
     consent = forms.BooleanField(label='I consent to having my data stored and processed.')
+
     pylint_score = models.CharField(max_length=100, verbose_name='Pylint score', null=True)
+    gender_guess = models.CharField(max_length=100, verbose_name="Gender Guess", null=True)
+    gender_guess_proba = models.CharField(max_length=100, verbose_name="Gender Guess Probablity", null=True)
+    components = models.CharField(max_length=100, verbose_name="Components", null=True)
 

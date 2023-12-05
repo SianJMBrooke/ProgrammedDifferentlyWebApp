@@ -40,6 +40,9 @@ def index(request):
 
             # Add the results to the database
             form.instance.pylint_score = processed_results['pylint_score']
+            form.instance.gender_guess = processed_results['output_gender_guess']
+            form.instance.gender_guess_proba = processed_results['output_gender_proba']
+            form.instance.components = processed_results['feature_importance']
             form.save()
 
             return render(request, 'render/results.html',
